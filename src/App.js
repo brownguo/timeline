@@ -1,22 +1,38 @@
 import React, { Component } from 'react';
-//import Button from 'antd/lib/button';
-import { Button } from 'antd';
-import { Timeline,Icon } from 'antd';
 import './App.css';
+import { Layout, Menu, Breadcrumb } from 'antd';
 
+const { Header, Content, Footer } = Layout;
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <Button type="primary">Halo world!</Button>
-                <Timeline mode="alternate">
-                    <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-                    <Timeline.Item color="green">Solve initial network problems 2015-09-01</Timeline.Item>
-                    <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>Hello World!</Timeline.Item>
-                    <Timeline.Item color="red">Network problems being solved 2015-09-01</Timeline.Item>
-                    <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-                    <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>Technical testing 2015-09-01</Timeline.Item>
-                </Timeline>
+                <Layout className="layout">
+                    <Header>
+                        <div className="logo" />
+                        <Menu
+                            theme="dark"
+                            mode="horizontal"
+                            defaultSelectedKeys={['2']}
+                            style={{ lineHeight: '64px' }}
+                        >
+                            <Menu.Item key="1">nav 1</Menu.Item>
+                            <Menu.Item key="2">nav 2</Menu.Item>
+                            <Menu.Item key="3">nav 3</Menu.Item>
+                        </Menu>
+                    </Header>
+                    <Content style={{ padding: '0 50px' }}>
+                        <Breadcrumb style={{ margin: '16px 0' }}>
+                            <Breadcrumb.Item>Home</Breadcrumb.Item>
+                            <Breadcrumb.Item>List</Breadcrumb.Item>
+                            <Breadcrumb.Item>App</Breadcrumb.Item>
+                        </Breadcrumb>
+                        <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+                    </Content>
+                    <Footer style={{ textAlign: 'center' }}>
+                        Ant Design ©2018 Created by Ant UED
+                    </Footer>
+                </Layout>
             </div>
         );
     }
