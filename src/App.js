@@ -25,7 +25,7 @@ const IconText = ({ type, text }) => (
 class App extends Component {
     render() {
         return (
-            <Spin indicator={antIcon} delay={10000} />,
+            <Spin indicator={antIcon} delay={500} />,
             <div className="App">
                 <Layout className="layout">
                     <Header>
