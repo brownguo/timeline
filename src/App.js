@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Layout, Menu, Breadcrumb,Timeline,List,Icon,Avatar} from 'antd';
+import { Layout, Menu, Breadcrumb,Spin,List,Icon,Avatar} from 'antd';
 
 const { Header, Content, Footer } = Layout;
 const listData = [];
+const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />;
+
 for (let i = 0; i < 23; i++) {
     listData.push({
         href: 'http://ant.design',
@@ -23,6 +25,7 @@ const IconText = ({ type, text }) => (
 class App extends Component {
     render() {
         return (
+            <Spin indicator={antIcon} delay={10000} />,
             <div className="App">
                 <Layout className="layout">
                     <Header>
