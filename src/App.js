@@ -33,9 +33,9 @@ class App extends Component {
                             defaultSelectedKeys={['2']}
                             style={{ lineHeight: '64px' }}
                         >
-                            <Menu.Item key="1">nav 1</Menu.Item>
-                            <Menu.Item key="2">nav 2</Menu.Item>
-                            <Menu.Item key="3">nav 3</Menu.Item>
+                            <Menu.Item key="1">Home!</Menu.Item>
+                            <Menu.Item key="2">Tech！</Menu.Item>
+                            <Menu.Item key="3">Live!</Menu.Item>
                         </Menu>
                     </Header>
                     <Content style={{ padding: '0 50px' }}>
@@ -45,20 +45,6 @@ class App extends Component {
                             <Breadcrumb.Item>App</Breadcrumb.Item>
                         </Breadcrumb>
                         <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-                            <Timeline>
-                                <Timeline.Item color="green">Create a services site 2015-09-01</Timeline.Item>
-                                <Timeline.Item color="green">Create a services site 2015-09-01</Timeline.Item>
-                                <Timeline.Item color="red">
-                                    <p>Solve initial network problems 1</p>
-                                    <p>Solve initial network problems 2</p>
-                                    <p>Solve initial network problems 3 2015-09-01</p>
-                                </Timeline.Item>
-                                <Timeline.Item>
-                                    <p>Technical testing 1</p>
-                                    <p>Technical testing 2</p>
-                                    <p>Technical testing 3 2015-09-01</p>
-                                </Timeline.Item>
-                            </Timeline>
                             <List
                                 itemLayout="vertical"
                                 size="large"
